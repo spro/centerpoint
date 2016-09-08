@@ -137,7 +137,7 @@ PointsList = React.createClass
     render: ->
         <div>
             {@state.points.map (point) =>
-                <div className='point'>
+                <div className='point' key=point.name>
                     <span className='name'>{point.name}</span>
                     <span className='address'>{point.address}</span>
                     <a onClick=@removePoint(point) className='delete'>&times;</a>
